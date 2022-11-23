@@ -1,5 +1,5 @@
 const graphql = require("graphql")
-
+require("../lib/firebase")
 const {
 GraphQLSchema,
 GraphQLObjectType,
@@ -33,7 +33,6 @@ const RootQuery = new GraphQLObjectType({
         }
     }
 })
-
 
 
 
