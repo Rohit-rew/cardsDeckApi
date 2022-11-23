@@ -24,17 +24,41 @@ const CardType = new GraphQLObjectType({
     }
 })
 
+const DeckType = new GraphQLObjectType({
+    name : "DeckId",
+    fields : ()=>{
+        return {
+            id : {type : GraphQLString},
+        }
+    }
+})
 
 
-//Rootquery
+
+//=> QUERY
 const RootQuery = new GraphQLObjectType({
     name : "RootQuery",
     fields : {
         card : {
             type : CardType,
-            args : {id : {type : GraphQLInt} },
+            args : {deckid : {type : GraphQLString} },
             resolve(parent , args){
                 return getAllCards()
+            }
+        },
+     
+    }
+})
+
+//=> MUTATION
+const DrarDecks = new GraphQLObjectType({
+    name : "DrawDecks",
+    fields : {
+        deckid : {
+            type : DeckType,
+            args : {decks : {type : GraphQLInt}, shuffled : {type : graphql.GraphQLBoolean} , },
+            resolve(parent , args){
+                return {id : "hello there"}
             }
         }
     }
@@ -44,5 +68,6 @@ const RootQuery = new GraphQLObjectType({
 
 // schema export
 module.exports = new GraphQLSchema({
-    query : RootQuery
+    query : RootQuery,
+    mutation : DrarDecks
 })
