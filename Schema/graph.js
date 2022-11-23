@@ -1,5 +1,10 @@
 const graphql = require("graphql")
-require("../lib/firebase")
+
+// firebase logic imports
+const {getAllCards} = require("../lib/dbfetchlogic")
+
+
+//graphql starts
 const {
 GraphQLSchema,
 GraphQLObjectType,
@@ -13,14 +18,15 @@ const CardType = new GraphQLObjectType({
     name : "Card",
     fields : ()=>{
         return {
-            name : {type :GraphQLString}
+            card : {type :GraphQLString},
+            id : {type : GraphQLString}
         }
     }
 })
 
 
 
-
+//Rootquery
 const RootQuery = new GraphQLObjectType({
     name : "RootQuery",
     fields : {
@@ -28,7 +34,7 @@ const RootQuery = new GraphQLObjectType({
             type : CardType,
             args : {id : {type : GraphQLInt} },
             resolve(parent , args){
-                return {name : "Rohit"}
+                return getAllCards()
             }
         }
     }
@@ -36,7 +42,7 @@ const RootQuery = new GraphQLObjectType({
 
 
 
-
+// schema export
 module.exports = new GraphQLSchema({
     query : RootQuery
 })

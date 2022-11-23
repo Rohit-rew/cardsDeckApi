@@ -5,7 +5,7 @@ const app = express();
 //env config
 const env = require("dotenv");
 env.config();
-const port = process.env.PORT;
+const port = process.env.PORT || 4000;
 
 
 //graphql
