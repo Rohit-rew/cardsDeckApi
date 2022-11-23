@@ -7,9 +7,17 @@ const env = require("dotenv");
 env.config();
 const port = process.env.PORT;
 
-app.use("/", (req, res) => {
-  res.status(200).json({ success: true });
-});
+
+//graphql
+const GraphQLSchema = require("./Schema/graph")
+const {graphqlHTTP} = require("express-graphql");
+
+app.use("/graphql" , graphqlHTTP({
+    schema : GraphQLSchema,
+    graphiql : true,
+}) )
+
+
 
 //server start
 const start = () => {
