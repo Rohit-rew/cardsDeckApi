@@ -28,3 +28,5 @@ const start = () => {
   }
 };
 start();
+
+module.exports = app
