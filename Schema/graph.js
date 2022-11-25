@@ -1,7 +1,6 @@
 const graphql = require("graphql")
-
 // firebase logic imports
-const {getAllCards} = require("../lib/dbfetchlogic")
+const {getAllCards , createNewDeck} = require("../lib/dbfetchlogic")
 
 
 //graphql starts
@@ -12,6 +11,9 @@ GraphQLInt,
 GraphQLString
 } = graphql
 
+
+//randomID generator
+const randomIdGenerator = require("../lib/randomId")
 
 // Types
 const CardType = new GraphQLObjectType({
@@ -58,14 +60,15 @@ const DrarDecks = new GraphQLObjectType({
     fields : {
         deckid : {
             type : DeckType,
-            args : {decks : {type : GraphQLInt}, shuffled : {type : graphql.GraphQLBoolean} , },
+            args : {decks : {type : GraphQLInt}, shuffled : {type : graphql.GraphQLBoolean} },
             resolve(parent , args){
-                return {id : "hello there"}
+                const id = randomIdGenerator()
+                createNewDeck(id)
+                return {id : id}
             }
         }
     }
 })
-
 
 
 // schema export
@@ -73,3 +76,5 @@ module.exports = new GraphQLSchema({
     query : RootQuery,
     mutation : DrarDecks
 })
+
+
