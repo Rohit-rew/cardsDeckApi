@@ -20,13 +20,6 @@ app.use("/graphql" , graphqlHTTP({
 
 
 //server start
-const start = () => {
-  try {
-    app.listen(port, console.log(`server started at ${port}`));
-  } catch (err) {
-    console.log(err);
-  }
-};
-start();
+app.listen(port, console.log(`server started at ${port}`));
 
 module.exports = app
