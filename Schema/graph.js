@@ -8,7 +8,8 @@ const {
 GraphQLSchema,
 GraphQLObjectType,
 GraphQLInt,
-GraphQLString
+GraphQLString,
+GraphQLList
 } = graphql
 
 
@@ -23,10 +24,12 @@ const CardType = new GraphQLObjectType({
             code : {type : GraphQLString},
             imageUrl : {type : GraphQLString},
             suite : {type : GraphQLString},
-            value : {type : GraphQLInt}
+            value : {type : GraphQLInt},
+            id : {type : GraphQLString}
         }
     }
 })
+
 
 const DeckType = new GraphQLObjectType({
     name : "DeckId",
@@ -45,11 +48,18 @@ const RootQuery = new GraphQLObjectType({
     fields : {
         card : {
             type : CardType,
-            args : {deckid : {type : GraphQLString} },
+            args : {deckid : {type : GraphQLString} , draw : {type : GraphQLInt} },
             resolve(parent , args){
-                return getAllCards()
+                return getAllCards(args.deckid , args.draw)
             }
         },
+        cards : {
+            type : new GraphQLList(CardType),
+            args : {deckid : {type : GraphQLString} , draw : {type : GraphQLInt}},
+            resolve(parent , args){
+                return getAllCards(args.deckid , args.draw)
+            }
+        }
      
     }
 })
