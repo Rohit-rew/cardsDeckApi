@@ -18,8 +18,10 @@ const CardType = new GraphQLObjectType({
     name : "Card",
     fields : ()=>{
         return {
-            card : {type :GraphQLString},
-            id : {type : GraphQLString}
+            code : {type : GraphQLString},
+            imageUrl : {type : GraphQLString},
+            suite : {type : GraphQLString},
+            value : {type : GraphQLInt}
         }
     }
 })
