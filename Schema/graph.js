@@ -9,7 +9,8 @@ GraphQLSchema,
 GraphQLObjectType,
 GraphQLInt,
 GraphQLString,
-GraphQLList
+GraphQLList,
+GraphQLNonNull
 } = graphql
 
 
@@ -55,7 +56,7 @@ const RootQuery = new GraphQLObjectType({
         },
         cards : {
             type : new GraphQLList(CardType),
-            args : {deckid : {type : GraphQLString} , draw : {type : GraphQLInt}},
+            args : {deckid : {type :new GraphQLNonNull(GraphQLString)} , draw : {type : GraphQLInt}},
             resolve(parent , args){
                 return getAllCards(args.deckid , args.draw)
             }
@@ -73,7 +74,7 @@ const DrarDecks = new GraphQLObjectType({
             args : {decks : {type : GraphQLInt}, shuffled : {type : graphql.GraphQLBoolean} },
             resolve(parent , args){
                 const id = randomIdGenerator()
-                createNewDeck(id)
+                createNewDeck(id , args.decks)
                 return {id : id}
             }
         }
