@@ -1,6 +1,6 @@
 const graphql = require("graphql")
 // firebase logic imports
-const {getAllCards , createNewDeck} = require("../lib/dbfetchlogic")
+const {getAllCards , createNewDeck , getSingleCard , getCards} = require("../lib/dbfetchlogic")
 
 
 //graphql starts
@@ -26,7 +26,7 @@ const CardType = new GraphQLObjectType({
             imageUrl : {type : GraphQLString},
             suite : {type : GraphQLString},
             value : {type : GraphQLInt},
-            id : {type : GraphQLString}
+            // id : {type : GraphQLString}
         }
     }
 })
@@ -47,21 +47,13 @@ const DeckType = new GraphQLObjectType({
 const RootQuery = new GraphQLObjectType({
     name : "RootQuery",
     fields : {
-        card : {
-            type : CardType,
-            args : {deckid : {type : GraphQLString} , draw : {type : GraphQLInt} },
-            resolve(parent , args){
-                return getAllCards(args.deckid , args.draw)
-            }
-        },
         cards : {
             type : new GraphQLList(CardType),
-            args : {deckid : {type :new GraphQLNonNull(GraphQLString)} , draw : {type : GraphQLInt}},
+            args : {deckid : {type : GraphQLString} , draw : {type : GraphQLInt} },
             resolve(parent , args){
-                return getAllCards(args.deckid , args.draw)
+                return getCards(args.deckid , args.draw)
             }
         }
-     
     }
 })
 
@@ -73,9 +65,7 @@ const DrarDecks = new GraphQLObjectType({
             type : DeckType,
             args : {decks : {type : GraphQLInt}, shuffled : {type : graphql.GraphQLBoolean} },
             resolve(parent , args){
-                const id = randomIdGenerator()
-                createNewDeck(id , args.decks)
-                return {id : id}
+                return {id : createNewDeck()}
             }
         }
     }

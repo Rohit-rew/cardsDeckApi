@@ -140,7 +140,7 @@ const cards = [
     },
     {   
         code : "0S",
-        imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/spades/0S_F1iW9TDR6G.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355638587",
+        imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/spades/0S_F1iW9TDR6G.png?ik-sdk-version=javascript-1.4.3&updatedAt=166935563hearts",
         suite : "spades",
         value : 10
     },
@@ -169,79 +169,79 @@ const cards = [
     {   
         code : "AC",
         imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/clubs/ace_clubs_R_w8EwyWs.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355644809",
-        suite : "spades",
+        suite : "clubs",
         value : 1
     },
     {   
         code : "2C",
         imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/clubs/2C_ZRFyUKhWz.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355645039",
-        suite : "spades",
+        suite : "clubs",
         value : 2
     },
     {   
         code : "3C",
         imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/clubs/3C_nPgbs2tbT8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355643319",
-        suite : "spades",
+        suite : "clubs",
         value : 3
     },
     {   
         code : "4C",
         imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/clubs/4C_ru3DFITYb.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355644936",
-        suite : "spades",
+        suite : "clubs",
         value : 4
     },
     {   
         code : "5C",
         imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/clubs/5C_F8qAAjsAFv.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355645912",
-        suite : "spades",
+        suite : "clubs",
         value : 5
     },
     {   
         code : "6C",
-        imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/clubs/6C_bM414Ocm1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355641943",
-        suite : "spades",
+        imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/clubs/6C_bclubsm1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355641943",
+        suite : "clubs",
         value : 6
     },
     {   
         code : "7C",
         imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/clubs/7C_Ako3cuyDy.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355641966",
-        suite : "spades",
+        suite : "clubs",
         value : 7
     },
     {   
         code : "8C",
         imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/clubs/8C_J7htLusSWb.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355647490",
-        suite : "spades",
+        suite : "clubs",
         value : 8
     },
     {   
         code : "9C",
         imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/clubs/9C_kr-9Zfxhw_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355644940",
-        suite : "spades",
+        suite : "clubs",
         value : 9
     },
     {   
         code : "0C",
         imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/clubs/0C_HQhQHPeKm.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355642777",
-        suite : "spades",
+        suite : "clubs",
         value : 10
     },
     {   
         code : "JC",
         imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/clubs/JC_M20zogqWBU.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355642552",
-        suite : "spades",
+        suite : "clubs",
         value : 11
     },
     {   
         code : "QC",
         imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/clubs/QC_ldfkfR_UZ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355644322",
-        suite : "spades",
+        suite : "clubs",
         value : 12
     },
     {   
         code : "KC",
         imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/clubs/KC_GyJa-aHAF.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355644181",
-        suite : "spades",
+        suite : "clubs",
         value : 13
     },
 
@@ -252,79 +252,79 @@ const cards = [
     {   
         code : "AH",
         imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/hearts/ace_hearts_7Z1sP01vyv.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355633268",
-        suite : "spades",
+        suite : "hearts",
         value : 1
     },
     {   
         code : "2H",
         imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/hearts/2H__nolJLuRd.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355634276",
-        suite : "spades",
+        suite : "hearts",
         value : 2
     },
     {   
         code : "3H",
         imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/hearts/3H_icz3HmUL6-.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355634353",
-        suite : "spades",
+        suite : "hearts",
         value : 3
     },
     {   
         code : "4H",
         imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/hearts/4H_FrUwVn5QaW.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355633629",
-        suite : "spades",
+        suite : "hearts",
         value : 4
     },
     {   
         code : "5H",
         imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/hearts/5H_GQnY2sJGf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355633341",
-        suite : "spades",
+        suite : "hearts",
         value : 5
     },
     {   
         code : "6H",
         imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/hearts/6H_KhznaZZIP.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355637311",
-        suite : "spades",
+        suite : "hearts",
         value : 6
     },
     {   
         code : "7H",
         imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/hearts/7H_APPqxfyaC.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355636971",
-        suite : "spades",
+        suite : "hearts",
         value : 7
     },
     {   
         code : "8H",
         imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/hearts/8H_j7VIHPjrgs.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355634124",
-        suite : "spades",
+        suite : "hearts",
         value : 8
     },
     {   
         code : "9H",
         imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/hearts/9H_H9ex_kFLZ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355633509",
-        suite : "spades",
+        suite : "hearts",
         value : 9
     },
     {   
         code : "0H",
         imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/hearts/0H_5NfJMIocTR.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355634910",
-        suite : "spades",
+        suite : "hearts",
         value : 10
     },
     {   
         code : "JH",
         imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/hearts/JH_EkTaOgSzp.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355634380",
-        suite : "spades",
+        suite : "hearts",
         value : 11
     },
     {   
         code : "QH",
         imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/hearts/QH_WhpS3ItxI.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355634360",
-        suite : "spades",
+        suite : "hearts",
         value : 12
     },
     {   
         code : "KH",
         imageUrl : "https://ik.imagekit.io/ylyzsq6uc/cardAPI/hearts/KH_gFtUzW0Ce.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669355636347",
-        suite : "spades",
+        suite : "hearts",
         value : 13
     },
 
