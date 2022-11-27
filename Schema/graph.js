@@ -1,6 +1,6 @@
 const graphql = require("graphql")
 // firebase logic imports
-const {getAllCards , createNewDeck , getSingleCard , getCards , lastRemoved} = require("../lib/dbfetchlogic")
+const {getAllCards , createNewDeck , getSingleCard , getCards , lastRemoved , shuffleDeck} = require("../lib/dbfetchlogic")
 
 //graphql starts
 const {
@@ -52,11 +52,19 @@ const RootQuery = new GraphQLObjectType({
                 return getCards(args.deckid , args.draw)
             }
         },
+        // replaced the last drawn card at the end of deck
         replace : {
             type : CardType,
-            args : {deckId : {type : GraphQLString} },
+            args : {deckid : {type : GraphQLString} },
             resolve(parent , args){
                 return lastRemoved(args.deckId)
+            }
+        },
+        shuffle : {
+            type : new GraphQLList(CardType),
+            args : {deckid : {type : GraphQLString}},
+            resolve(parent,args){
+                return shuffleDeck(args.deckid)
             }
         }
     }
