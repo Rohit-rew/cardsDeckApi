@@ -2,7 +2,6 @@ const graphql = require("graphql")
 // firebase logic imports
 const {getAllCards , createNewDeck , getSingleCard , getCards} = require("../lib/dbfetchlogic")
 
-
 //graphql starts
 const {
 GraphQLSchema,
@@ -42,7 +41,6 @@ const DeckType = new GraphQLObjectType({
 })
 
 
-
 //=> QUERY
 const RootQuery = new GraphQLObjectType({
     name : "RootQuery",
@@ -65,7 +63,7 @@ const DrarDecks = new GraphQLObjectType({
             type : DeckType,
             args : {decks : {type : GraphQLInt}, shuffled : {type : graphql.GraphQLBoolean} },
             resolve(parent , args){
-                return {id : createNewDeck()}
+                return {id : createNewDeck(args.shuffled)}
             }
         }
     }
