@@ -54,10 +54,10 @@ const RootQuery = new GraphQLObjectType({
         },
         // replaced the last drawn card at the end of deck
         replace : {
-            type : CardType,
-            args : {deckid : {type : GraphQLString} },
+            type : new GraphQLList(CardType),
+            args : {deckid : {type : GraphQLString}, last : {type : GraphQLInt} },
             resolve(parent , args){
-                return lastRemoved(args.deckId)
+                return lastRemoved(args.deckid , args.last)
             }
         },
         shuffle : {
